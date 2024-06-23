@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components in React</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Write your code here
+    const hstyle={
+        alignItems : "center",
+        textAlign:"center",
+        justifyContent : "center",
+    }
+    const sstyle ={
+        color : "green",
+        textDecoration : "underLine"
+    }
+    const box={
+        border : "2px solid",
+        height : "25px",
+        width : "25px",
+        textAlign:"center",
+        justifyContent:"center",
+        marginLeft: "219px",
+        color:"green",
+        backgroundColor : "rgb(99, 237, 115)",
+        
+        
+    }
+    const f ={
+        display : "flex",
+        textAlign:"center",
+        justifyContent:"center",
+        alignItems:"center",
+    }
+
+    const ele =(
+        <>
+         <h2><b style={{...hstyle}}>Getting started in <span style={sstyle}>3 easy steps</span></b></h2>
+         <br/>
+         <div style={{...f}}>
+             <div>
+                <h2 style={box}>01</h2>
+                <h2>Find your template</h2>
+                <p>Every template is embedded within an inframe , so you easily check what they look like and test the responsive behaviour.</p>
+            </div>
+            <div>
+                <h2 style={box}>02</h2>
+                <h2>copy the code</h2>
+                <p>Click the code tab to see the actual source code of the template. copy and paste it into your project and adjust it to your needs.</p>
+            </div>
+            <div>
+                <h2 style={box}>03</h2>
+                <h2>Enjoy your free time</h2>
+                <p>You've just saved yourself a bunch of time not building the same stuff over again , Enjoy your free time, and build business features</p>
+            </div>
+        </div>
+        
+
+
+
+        </>
+    )
+    const r = ReactDOM.createRoot(document.getElementById("root"));
+    r.render(ele);
+  </script>
+  <style>
+    body{
+        text-align: center;
+        align-items: center;
+        
+    }
+  </style>
+</body>
+</html>
